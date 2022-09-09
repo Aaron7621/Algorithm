@@ -380,8 +380,6 @@ O(nlogn)时间复杂度
 
 按层数遍历，O(n^2)，超时
 
-
-
 双指针：初始化左指针和右指针，左右指针都要指向柱子
 
 - 如果左指针<右指针，意味着左指针右边所有低于柱子的格子都必然能储水。
@@ -403,7 +401,7 @@ O(nlogn)时间复杂度
 
 
 
-## 92反转链表Ⅱ
+## 92 反转链表Ⅱ
 
 不能用(p == q -> next)判断指针是否相等。即使相等，判断也是false
 
@@ -424,7 +422,7 @@ O(nlogn)时间复杂度
 
 
 
-## 69Sqrt(x)
+## 69 Sqrt(x)
 
 这题看上去是浮点数二分，实际上是整数二分
 
@@ -468,7 +466,7 @@ dfs的时候传两个阈值下去，根据递归的是左子树还是右子树�
 
 
 
-## 55jump game
+## 55 jump game
 
 好题
 
@@ -476,7 +474,7 @@ dfs的时候传两个阈值下去，根据递归的是左子树还是右子树�
 
 
 
-## 211设计tire树
+## 211 设计tire树
 
 多练习
 
@@ -531,9 +529,13 @@ same tree 和判断对称树：都是判断两棵树是否相等，代码几乎�
 
 
 
-## 3Longest Substring Without Repeating Characters && 424Longest Repeating Character Replacement && 567Permutation in String
+## 3 Longest Substring Without Repeating Characters
 
-这两题都是滑动窗口。可以看出滑动窗口经常和hashmap一起使用的
+### 424 Longest Repeating Character Replacement
+
+### 567 Permutation in String
+
+这几题都是滑动窗口。可以看出滑动窗口经常和hashmap一起使用的
 
 
 
@@ -557,7 +559,7 @@ BFS不一定非要用queue。详见别人的题解
 
 ## 621 Task Scheduler
 
-非常非常骚
+非常骚，可以说最优解法是找到了这道题目一个”毫不讲理“的规律
 
 
 
@@ -574,3 +576,37 @@ BFS不一定非要用queue。详见别人的题解
 
 1. 每行都来一次二分，则O(mlogn)
 2. 更妙的方法，但线性。从右上角元素开始找，每次遍历排除一行或一列。O(m + n)
+
+## 239 Sliding Window Maximum
+
+好题。用一个deque实现单调队列
+
+单调队列的好题
+
+
+
+## 295 Find Median from Data Stream
+
+非常好的题目
+
+两个堆的方法堪称一绝
+
+有时候常规逻辑和数据结构对一道题难以入手，可以考虑用双栈、双堆这样的思维去思考
+
+
+
+## 151 Reverse Words in a String
+
+SC = O(1)，先反转整个字符串，一切都变简单了
+
+
+
+## 169 Majority Element
+
+这道简单题如果要做到SC = O(1)且TC = O(n)，使用：
+
+- **摩尔投票法**
+
+- 位操作法
+
+都很妙
